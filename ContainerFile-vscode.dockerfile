@@ -46,10 +46,10 @@ RUN yum install -y \
 
 RUN yum update -y
 
-RUN useradd devel
+RUN useradd rianby64
 
-RUN mkdir -p /home/devel/shared
+USER rianby64
 
-WORKDIR /home/devel/shared
+WORKDIR /home/rianby64
 
 CMD [ "bash" ]
