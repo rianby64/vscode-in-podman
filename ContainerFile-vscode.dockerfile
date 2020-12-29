@@ -42,7 +42,8 @@ RUN yum install -y \
     xorg-x11-fonts-Type1.noarch \
     xorg-x11-fonts-cyrillic.noarch \
     xorg-x11-fonts-ethiopic.noarch \
-    xorg-x11-fonts-misc.noarch
+    xorg-x11-fonts-misc.noarch \
+    libcanberra-gtk3.x86_64
 
 RUN yum update -y
 
