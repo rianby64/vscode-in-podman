@@ -16,6 +16,8 @@ enabled=1\n\
 gpgcheck=1\n\
 gpgkey=https://dl.google.com/linux/linux_signing_key.pub" > /etc/yum.repos.d/google-chrome.repo
 
+RUN yum update -y
+
 RUN yum install -y \
     wget.x86_64 \
     code.x86_64 \
@@ -45,12 +47,14 @@ RUN yum install -y \
     xorg-x11-fonts-misc.noarch \
     libcanberra-gtk3.x86_64
 
-RUN yum update -y
-
 RUN useradd rianby64
 
 USER rianby64
 
-WORKDIR /home/rianby64
+ENV HOME=/home/rianby64
+
+WORKDIR $HOME
+
+USER root
 
 CMD [ "bash" ]
