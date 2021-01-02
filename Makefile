@@ -13,7 +13,6 @@ ifeq ($(CONTAINER_ID),)
 		--ipc=host \
 		--userns keep-id \
 		--security-opt seccomp=unconfined \
-		-u ${USER} \
 		vscode
 else
 	podman start -ia $(CONTAINER_ID)

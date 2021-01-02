@@ -19,6 +19,7 @@ gpgkey=https://dl.google.com/linux/linux_signing_key.pub" > /etc/yum.repos.d/goo
 RUN yum update -y
 
 RUN yum install -y \
+    dbus-x11.x86_64 \
     wget.x86_64 \
     code.x86_64 \
     google-chrome-stable.x86_64 \
