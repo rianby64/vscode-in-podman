@@ -47,14 +47,14 @@ RUN yum install -y \
     xorg-x11-fonts-misc.noarch \
     libcanberra-gtk3.x86_64
 
-RUN useradd rianby64
+#RUN useradd rianby64
 
-USER rianby64
+#USER rianby64
 
-ENV HOME=/home/rianby64
+#ENV HOME=/home/rianby64
 
-WORKDIR $HOME
+#WORKDIR $HOME
 
-USER root
+#USER root
 
 CMD [ "bash" ]

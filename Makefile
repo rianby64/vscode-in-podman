@@ -12,6 +12,7 @@ ifeq ($(CONTAINER_ID),)
 		--device /dev/snd \
 		--ipc=host \
 		--userns keep-id \
+		--security-opt seccomp=unconfined \
 		-u ${USER} \
 		vscode
 else
