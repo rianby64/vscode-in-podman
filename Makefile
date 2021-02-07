@@ -3,7 +3,7 @@ $(eval CONTAINER_ID := $(shell podman ps -a | grep vscode | awk '{ print $$1 }')
 
 all:
 ifeq ($(CONTAINER_ID),)
-	podman build -f ContainerFile-vscode.dockerfile -t vscode .
+	podman build -f centos-vscode.dockerfile -t vscode .
 	podman run -it \
 		--name vscode \
 		-e DISPLAY \
